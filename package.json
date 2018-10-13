@@ -1,0 +1,22 @@
+{
+  "name": "stringcalc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "Jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ballihakkari/Stringcalculator_hugb.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ballihakkari/Stringcalculator_hugb/issues"
+  },
+  "homepage": "https://github.com/Ballihakkari/Stringcalculator_hugb#readme",
+  "devDependencies": {
+    "jest": "^23.6.0"
+  }
+}
