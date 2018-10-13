@@ -14,5 +14,4 @@ function Add(numbers){
     }
     return parseInt(numbers);
 }
-
  module.exports = Add;
