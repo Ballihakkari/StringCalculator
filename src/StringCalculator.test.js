@@ -6,3 +6,6 @@ test("An empty string will return 0", () => {
 test("If one number is inserted, return that number", () => {
   expect(Add("5")).toBe(5);
 });
+test("If two numbers are inserted, return their sum", () =>{
+    expect(Add("1,2")).toBe(3);
+});
