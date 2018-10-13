@@ -6,10 +6,13 @@ var split = function(numbers){
 var sumofArr = function(sumNumbers, sum){
     var neg = "Negatives not allowed: ";                                    //String of length 23
     for(i = 0; i<sumNumbers.length; i++){
-            if(parseInt(sumNumbers[i]) < 0){                                // if a number is less than 0
-                neg += sumNumbers[i] + ",";                                 // we add the number to the string that keeps tracks of negatives negative numbers
-            }
+        if(parseInt(sumNumbers[i]) < 0){                                    // if a number is less than 0
+            neg += sumNumbers[i] + ",";                                     // we add the number to the string that keeps tracks of negatives negative numbers
+            continue;
+        }
+        else if(parseInt(sumNumbers[i]) < 1000){
             sum += parseInt(sumNumbers[i]);
+        }
     }
     if(neg.length > 23){                                                    // if a negative number was added to the string, we enter here
         throw neg.substring(0, neg.length - 1);                             // Throw the string( disclude the last ',' )

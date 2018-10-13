@@ -21,3 +21,9 @@ test("Calling Add with a negative number will throw an exception", () => {
 test("Calling Add with one negative number throws an exception", () => {
   expect(() => {Add("-4")}).toThrow('Negatives not allowed: -4');
 })
+test("Numbers bigger than 1000 should be ignored", () => {
+  expect(Add("1001, 0 \n 3000, 1")).toBe(1);
+});
+test("Make Add ignore numbers over 1000 when there is no delimiter", () => {
+  expect(Add("1001")).toBe(0);
+});
