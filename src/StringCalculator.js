@@ -1,3 +1,16 @@
+var split = function(numbers)
+{
+    numbers = numbers.split(",");
+    return numbers;
+}
+var sumofArr = function(splitNumbers, sum)
+{
+    for(i = 0; i<splitNumbers.length; i++)
+    {
+        sum += parseInt(splitNumbers[i]);
+    }
+    return sum;
+}
 function Add(numbers){
     if(numbers == ""){
         return 0;
@@ -5,12 +18,8 @@ function Add(numbers){
     if(numbers.includes(","))
     {
         var sum = 0;
-        numbers = numbers.split(",");
-        for(i = 0; i<numbers.length; i++)
-        {
-            sum += parseInt(numbers[i]);
-        }
-        return sum;
+        numbers = split(numbers);
+        return sumofArr(numbers,sum);
     }
     return parseInt(numbers);
 }
