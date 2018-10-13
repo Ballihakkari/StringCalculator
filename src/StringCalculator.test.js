@@ -27,3 +27,9 @@ test("Numbers bigger than 1000 should be ignored", () => {
 test("Make Add ignore numbers over 1000 when there is no delimiter", () => {
   expect(Add("1001")).toBe(0);
 });
+test("Allow the Add method to handle a different delimiter:", () => {
+  expect(Add("//;\n1;2")).toBe(3);
+})
+test("Allow the Add method to handle a delimiter of multiple characters:", () => {
+  expect(Add("//-----------\n2,\n3-----------5")).toBe(2+3+5);
+});
