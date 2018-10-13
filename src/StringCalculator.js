@@ -1,7 +1,7 @@
-var split = function(numbers)
-{
-    numbers = numbers.split(",");
-    return numbers;
+var split = function(numbers){
+     var seperateOn = [",", "\n"];                                          //put chosen delimiters into the variable seperateOn
+     var tmparr = numbers.split(new RegExp(seperateOn.join('|'), 'g'));     //Split on those delimiters
+     return tmparr;
 }
 var sumofArr = function(splitNumbers, sum)
 {
@@ -15,7 +15,7 @@ function Add(numbers){
     if(numbers == ""){
         return 0;
     }
-    if(numbers.includes(","))
+    if(numbers.includes(",") || numbers.includes("\n"))
     {
         var sum = 0;
         numbers = split(numbers);
