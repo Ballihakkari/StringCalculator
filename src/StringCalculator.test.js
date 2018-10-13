@@ -15,3 +15,9 @@ test("Allow the Add method to handle an unknown number of arguments/numbers", ()
 test("Allow the Add method to handle new lines between numbers (instead of commas)", () => {
   expect(Add("1\n2,3")).toBe(6);
 });
+test("Calling Add with a negative number will throw an exception", () => {
+  expect(() => {Add("2,-4,3,-5")}).toThrow('Negatives not allowed: -4,-5');
+});
+test("Calling Add with one negative number throws an exception", () => {
+  expect(() => {Add("-4")}).toThrow('Negatives not allowed: -4');
+})
